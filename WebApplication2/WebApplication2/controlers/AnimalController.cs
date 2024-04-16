@@ -63,6 +63,7 @@ namespace WebApplication2.controlers;
             command.Connection = connection;
             command.CommandText = "INSERT INTO Animals VALUES (@animalName,'','','' )";
             command.Parameters.AddWithValue("@animalName", addAnimal.Name);
+            command.ExecuteNonQuery();
             return Created("", null);
         }
 
