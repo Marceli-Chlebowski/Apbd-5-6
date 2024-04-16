@@ -7,7 +7,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 var app = builder.Build();
-
+app.Configuration.GetConnectionString("default");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
